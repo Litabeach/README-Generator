@@ -111,3 +111,6 @@ inquirer.prompt([
             err ? console.log(err) : console.log('Successfully created README.md!')
         );
     });
+
+
+    //how to add the contributor code of conduct if they select it?
