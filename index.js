@@ -35,7 +35,7 @@ ${responses.usage}
 
 ## License
 
-${responses.license}
+${responses.license} License
 
 ## Contributing
 
@@ -47,7 +47,7 @@ ${responses.tests}
 
 ## Questions
 
-If you have any questions about this application, please contact ${responses.email}.
+If you have any questions about this application, please contact ${responses.username} at ${responses.email}.
 `;
 
 inquirer.prompt([
