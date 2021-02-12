@@ -10,12 +10,6 @@ inquirer.prompt[(
 
     {
         type: 'input',
-        name: 'username',
-        message: 'what is your Github username?'
-    },
-
-    {
-        type: 'input',
         name: 'description',
         message: 'Write a brief desciption of your project'
     },
@@ -42,7 +36,26 @@ inquirer.prompt[(
         type: 'input',
         name: 'tests',
         message: 'Document any relevant tests'
-    }
+    },
+
+    {
+        type: 'list',
+        name: 'license',
+        message: 'Select a license',
+        choices: ['MIT', 'Apache', 'GPL']
+    },
+    
+    {
+        type: 'input',
+        name: 'username',
+        message: 'what is your Github username?'
+    },
+    
+    {
+        type: 'input',
+        name: 'email',
+        message: 'what is your email address?'
+    },
 
 
 )]
