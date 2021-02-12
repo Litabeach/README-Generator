@@ -1,6 +1,48 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 
+
+generateREADME = (responses) => 
+`# ${responses.title}
+
+## Description 
+
+${responses.description}
+
+## Table of Contents (Optional)
+
+* [Installation](#installation)
+* [Usage](#usage)
+* [Credits](#credits)
+* [License](#license)
+* [Contributing](#contributing)
+* [Tests](#tests)
+
+## Installation
+
+${responses.installation}
+
+## Usage 
+
+${responses.usage}
+
+// ## Credits  leave this out???
+
+
+## License
+
+${responses.license}
+
+
+## Contributing
+
+${responses.contributors}
+
+## Tests
+
+${responses.tests} 
+`
+
 inquirer.prompt[(
     {
         type: 'input',
@@ -31,7 +73,7 @@ inquirer.prompt[(
         name: 'contributors',
         message: 'List contributors and guidelines for contributing'
     },
-    
+
     {
         type: 'input',
         name: 'tests',
@@ -44,18 +86,24 @@ inquirer.prompt[(
         message: 'Select a license',
         choices: ['MIT', 'Apache', 'GPL']
     },
-    
+
     {
         type: 'input',
         name: 'username',
         message: 'what is your Github username?'
     },
-    
+
     {
         type: 'input',
         name: 'email',
         message: 'what is your email address?'
-    },
-
-
+    }
 )]
+
+    .then((responses) => {
+        const readmeContent = generateREADME(responses);
+
+        fs.writeFile('README.MD', readmeContent, (err) =>
+            err ? console.log(err) : console.log('Successfully created README.MD!')
+        );
+    });
