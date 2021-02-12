@@ -41,7 +41,7 @@ ${responses.contributors}
 ## Tests
 
 ${responses.tests} 
-`
+`;
 
 inquirer.prompt[(
     {
@@ -53,57 +53,57 @@ inquirer.prompt[(
     {
         type: 'input',
         name: 'description',
-        message: 'Write a brief desciption of your project'
+        message: 'Write a brief desciption of your project',
     },
 
     {
         type: 'input',
         name: 'installation',
-        message: 'How do we install your app?'
+        message: 'How do we install your app?',
     },
 
     {
         type: 'input',
         name: 'usage',
-        message: 'Enter relevent information about usage'
+        message: 'Enter relevent information about usage',
     },
 
     {
         type: 'input',
         name: 'contributors',
-        message: 'List contributors and guidelines for contributing'
+        message: 'List contributors and guidelines for contributing',
     },
 
     {
         type: 'input',
         name: 'tests',
-        message: 'Document any relevant tests'
+        message: 'Document any relevant tests',
     },
 
     {
         type: 'list',
         name: 'license',
         message: 'Select a license',
-        choices: ['MIT', 'Apache', 'GPL']
+        choices: ['MIT', 'Apache', 'GPL'],
     },
 
     {
         type: 'input',
         name: 'username',
-        message: 'what is your Github username?'
+        message: 'what is your Github username?',
     },
 
     {
         type: 'input',
         name: 'email',
-        message: 'what is your email address?'
+        message: 'what is your email address?',
     }
 )]
 
     .then((responses) => {
         const readmeContent = generateREADME(responses);
 
-        fs.writeFile('README.MD', readmeContent, (err) =>
-            err ? console.log(err) : console.log('Successfully created README.MD!')
+        fs.writeFile('README1.md', readmeContent, (err) =>
+            err ? console.log(err) : console.log('Successfully created README.md!')
         );
     });
