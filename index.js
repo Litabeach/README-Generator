@@ -30,9 +30,6 @@ ${responses.installation}
 
 ${responses.usage}
 
-// ## Credits  leave this out???
-
-
 ## License
 
 ${responses.license} License
