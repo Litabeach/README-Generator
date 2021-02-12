@@ -44,6 +44,10 @@ ${responses.contributors}
 ## Tests
 
 ${responses.tests} 
+
+## Questions
+
+If you have any questions about this application, please contact ${responses.email}.
 `;
 
 inquirer.prompt([
@@ -74,7 +78,7 @@ inquirer.prompt([
     {
         type: 'input',
         name: 'contributors',
-        message: 'List contributors and guidelines for contributing',
+        message: 'Write guidelines for contributing',
     },
 
     {
@@ -106,7 +110,7 @@ inquirer.prompt([
     .then((responses) => {
         const readmeContent = generateREADME(responses);
 
-        fs.writeFile('README1.md', readmeContent, (err) =>
+        fs.writeFile('README.md', readmeContent, (err) =>
             err ? console.log(err) : console.log('Successfully created README.md!')
         );
     });
