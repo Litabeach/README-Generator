@@ -5,11 +5,15 @@ const fs = require('fs');
 generateREADME = (responses) => 
 `# ${responses.title}
 
+![${responses.license}license badge](https://img.shields.io/badge/License-${responses.license}-blue)
+
 ## Description 
 
 ${responses.description}
 
-## Table of Contents (Optional)
+Published at: https://${responses.username}.github.io/${responses.title}
+
+## Table of Contents
 
 * [Installation](#installation)
 * [Usage](#usage)
@@ -33,7 +37,6 @@ ${responses.usage}
 
 ${responses.license}
 
-
 ## Contributing
 
 ${responses.contributors}
@@ -43,7 +46,7 @@ ${responses.contributors}
 ${responses.tests} 
 `;
 
-inquirer.prompt[(
+inquirer.prompt([
     {
         type: 'input',
         name: 'title',
@@ -98,7 +101,7 @@ inquirer.prompt[(
         name: 'email',
         message: 'what is your email address?',
     }
-)]
+])
 
     .then((responses) => {
         const readmeContent = generateREADME(responses);
