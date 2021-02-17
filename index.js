@@ -11,8 +11,6 @@ generateREADME = (responses) =>
 
 ${responses.description}
 
-Published at: https://${responses.username}.github.io/${responses.title}
-
 ## Table of Contents
 
 * [Installation](#installation)
@@ -44,16 +42,10 @@ ${responses.tests}
 
 ## Questions
 
-If you have any questions about this application, please contact ${responses.name} at ${responses.email}.
+If you have any questions about this application, please contact ${responses.username} at ${responses.email}.
 `;
 
 inquirer.prompt([
-
-    {
-        type: 'input',
-        name: 'name',
-        message: 'what is your name?',
-    },
 
     {
         type: 'input',
