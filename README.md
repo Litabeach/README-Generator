@@ -6,7 +6,7 @@
 
 A readme generator to make writing a readme for any project easy!
 
-Tutorial video: https://drive.google.com/file/d/17XOGSVhe4ZHMrl0OZ6Ulb7SxYJT5US0l/view
+Tutorial video: https://github.com/Litabeach/README-Generator/blob/main/Tutorial%20Video/README.md%20file%20generator.mp4
 
 ## Table of Contents
 
