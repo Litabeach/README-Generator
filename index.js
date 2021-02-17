@@ -34,6 +34,8 @@ ${responses.usage}
 
 This application is covered by the ${responses.license} License 
 
+## Contributing
+
 ${responses.contributors}
 
 ## Tests
@@ -42,10 +44,16 @@ ${responses.tests}
 
 ## Questions
 
-If you have any questions about this application, please contact ${responses.username} at ${responses.email}.
+If you have any questions about this application, please contact ${responses.name} at ${responses.email}.
 `;
 
 inquirer.prompt([
+
+    {
+        type: 'input',
+        name: 'name',
+        message: 'what is your name?',
+    },
 
     {
         type: 'input',
@@ -110,7 +118,3 @@ inquirer.prompt([
             err ? console.log(err) : console.log('Successfully created README.md!')
         );
     });
-
-
-    //how to add the contributor code of conduct if they select it?
-    //have a feature to add a screenshot?
