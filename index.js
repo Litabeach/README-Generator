@@ -5,7 +5,7 @@ const fs = require('fs');
 generateREADME = (responses) => 
 `# ${responses.title}
 
-![${responses.license}license badge](https://img.shields.io/badge/License-${responses.license}-blue)
+![${responses.license} license badge](https://img.shields.io/badge/License-${responses.license}-blue)
 
 ## Description 
 
@@ -32,9 +32,7 @@ ${responses.usage}
 
 ## License
 
-${responses.license} License
-
-## Contributing
+This application is covered by the ${responses.license} License 
 
 ${responses.contributors}
 
@@ -48,6 +46,7 @@ If you have any questions about this application, please contact ${responses.use
 `;
 
 inquirer.prompt([
+
     {
         type: 'input',
         name: 'title',
@@ -114,3 +113,4 @@ inquirer.prompt([
 
 
     //how to add the contributor code of conduct if they select it?
+    //have a feature to add a screenshot?
