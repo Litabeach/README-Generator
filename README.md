@@ -42,7 +42,7 @@ Contributors welcome, please contact litabeach123@gmail.com for more information
 
 ## Credits
 
-Lita Beach
+Lita Beach <br>
 Screencastify Video Recorder was used to create the tutorial video
 
 ## Questions
